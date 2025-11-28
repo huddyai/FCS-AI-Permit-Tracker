@@ -5,7 +5,13 @@ let ai: GoogleGenAI | null = null;
 
 const getAI = () => {
   if (!ai) {
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY as string;
+
+    if (!apiKey) {
+      console.error("❌ Missing VITE_GEMINI_API_KEY environment variable");
+    }
+
+    ai = new GoogleGenAI({ apiKey });
   }
   return ai;
 };
