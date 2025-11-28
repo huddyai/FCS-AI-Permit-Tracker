@@ -1,0 +1,5 @@
+{
+  "name": "FCS AI Permit Tracker",
+  "description": "A responsive, internal SaaS tool for FirstCarbon Solutions to track environmental permits, milestones, conditions, and evidence, featuring an integrated AI assistant.",
+  "requestFramePermissions": []
+}
